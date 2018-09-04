@@ -30,6 +30,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
 }
 
+img {
+  max-width: 100%;
+}
+
 
 /* ================================= 
   Base Layout Styles
@@ -212,6 +216,13 @@ deco {
 }
 
 /* Pets section */
+#pets {
+  background: url('img/cat_bg.svg');
+  /* paralax effect */
+  background-attachment: fixed;
+  background-position: center;
+}
+
 .profile {
   flex: 1 1 400px;
   max-width: 600px;
