@@ -1,0 +1,302 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+ul {
+  list-style: none;
+  }
+  
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Caveat', cursive;
+  margin-bottom: 1rem;
+}
+
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Layout Containers ---- */
+deco {
+  position: absolute;
+}
+
+.d-flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.wrapper {
+	width: 85%;
+	max-width: 1250px;
+	margin: 0 auto;
+}
+
+.main-header {
+	background-color:#4B467C;
+}
+
+.main-content {
+  background: #f6f6f6;
+}
+
+/* Logo */
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  width: 80px;
+  height: 60px;
+  fill: #fff;
+}
+
+.logo-heading {
+  font-family: 'Caveat', cursive;
+  color: #ffffff;
+}
+
+/* Navigation */
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  padding: 10px 15px;
+  font-family: 'Caveat', cursive;
+  font-size: 1.4rem;
+  color: #fff;
+  z-index: 1;
+}
+
+.nav-link--accent {
+  position: relative;
+  display: flex;
+  width: 235px;
+  padding-left: 65px;
+  margin: 0 20px;
+  text-align: center;
+}
+
+.icon-puppy {
+  position: absolute;
+  width: 100px;
+  left: 0;
+  top: -30px;
+}
+
+/* Banner */
+.banner {
+  display: flex;
+  padding: 2rem 0;
+}
+
+.banner-item {
+  flex: 1 0 50%;
+  max-width: 50%;
+}
+
+/* Search */
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.banner-heading {
+  max-width: 600px;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #4B467C;
+}
+
+.search-wrapper {
+  max-width: 600px;
+  text-align: center;
+}
+
+.search-heading {
+  color: #8A66AD;
+  font-size: 1.5rem;
+}
+
+.search-input {
+  padding: 10px 15px;
+  border: none;
+}
+
+.search-input::placeholder {
+  color: #B6B9C6;
+}
+
+.search-btn {
+  padding: 10px 15px;
+  background: #DE82C5;
+  color: #FFF;
+  font-weight: 600;
+  border-radius: 2px;
+}
+
+.deco-paw {
+  fill: #C5C7D6;
+}
+
+/* Section */
+.section-heading {
+  text-align: center;
+  font-size: 2rem;
+  color: #4B467C;
+}
+
+.section-container{
+  padding: 2rem 0;
+}
+
+/* Adoption section */
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1 0 320px;
+  max-width: 400px;
+  padding: 0 1rem;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.col-heading {
+  text-align: center;
+  font-size: 1.5rem;
+  
+}
+
+.col-content {
+  line-height: 1.6;
+  color: #84868e;
+}
+
+#adoption {
+  background: #fff;
+}
+
+#adoption .col-heading {
+  color: #8A66AD;
+}
+
+/* Pets section */
+.profile {
+  flex: 1 1 400px;
+  max-width: 600px;
+  margin: 1rem;
+  text-align: center;
+}
+
+.profile-img {
+  position: relative;
+  max-width: 80%;
+  width: 400px;
+  height: 245px;
+  padding: 10px;
+  margin: 0 auto -115px;
+  border: 2px solid #C5C7D6;
+  object-fit: cover;
+}
+
+.profile-caption {
+  padding: 125px 30px 30px;
+  background-color: #fff;
+}
+
+.profile-heading {
+  font-size: 1.5rem;
+  color: #4B467C;
+}
+
+.profile-txt {
+  color: #84868e;
+  font-size: 0.85rem;
+  margin-bottom: 1.2rem;
+}
+
+.profile-btn {
+  padding: 10px 15px;
+  background: #4B467C;
+  color: #FFF;
+  font-weight: 600;
+}
+
+
+
+/* Footer */
+.main-footer {
+  color: #C5C7D6;
+  background-color: #4B467C;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  color: #C5C7D6;
+  font-style: normal;
+}
+
+.contact-tel{
+  display: block;
+  color: inherit;
+}
+
+.contact-icon {
+  fill: #DE82C5;
+  width: 32px;
+  height: 32px;
+  margin-right: 1rem;
+}
+
+/* Social */
+.social-link-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.social-link .icon {
+  width: 50px;
+  height: 50px;
+  fill: #DE82C5;
+}
+
+.copyright {
+  display: block;
+  padding: 1rem 0;
+  text-align: center;
+}
