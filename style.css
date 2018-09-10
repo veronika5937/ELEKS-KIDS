@@ -21,6 +21,7 @@ a {
 }
 
 button {
+  background: transparent;
   border: none;
   outline: none;
 }
@@ -39,9 +40,40 @@ img {
   Base Layout Styles
 ==================================== */
 
-/* ---- Layout Containers ---- */
+/* ---- Common Styles ---- */
 deco {
   position: absolute;
+}
+
+.form-input {
+  margin: 0.5rem 0;
+  padding: 10px 15px;
+  border: none;
+}
+
+.form-input::placeholder {
+  color: #B6B9C6;
+}
+
+.accent-btn {
+  position: relative;
+  padding: 10px 15px;
+  background: #DE82C5;
+  color: #FFF;
+  font-weight: 600;
+  border-radius: 2px;
+  transition: 0.5s all ease;
+}
+
+.accent-btn:hover {
+  background: #fff;
+  color: #DE82C5;
+  transition: 0.5s all ease;
+  box-shadow: 0 0 2px 2px #DE82C5 inset;
+}
+
+.accent-btn:active {
+  top: 2px;
 }
 
 .d-flex {
@@ -53,7 +85,7 @@ deco {
 
 .wrapper {
 	width: 85%;
-	max-width: 1250px;
+	max-width: 1400px;
 	margin: 0 auto;
 }
 
@@ -62,7 +94,10 @@ deco {
 }
 
 .main-content {
-  background: #f6f6f6;
+  background: #f6f6f6 url('img/cat_bg.svg');
+  /* paralax effect */
+  background-attachment: fixed;
+  background-position: center;
 }
 
 /* Logo */
@@ -96,6 +131,10 @@ deco {
   z-index: 1;
 }
 
+.nav-link:hover {
+  color: #DE82C5;
+}
+
 .nav-link--accent {
   position: relative;
   display: flex;
@@ -112,58 +151,70 @@ deco {
   top: -30px;
 }
 
+/* Humburger  */
+.hamburger {
+ display: none;
+}
+
+.hamburger .line{
+  width: 24px;
+  height: 2px;
+  background-color: white;
+  display: block;
+  margin: 4px auto;
+  transition: all 0.3s ease-in-out;
+}
+
+/* THREE */
+
+.hamburger:hover .line:nth-child(1),
+.hamburger:hover .line:nth-child(3){
+  width: 18px;
+}
+
+.hamburger:hover .line:nth-child(1){
+  transform: translateY(6px) rotate(-45deg);
+}
+
+.hamburger:hover .line:nth-child(2){
+  opacity: 0;
+}
+
+.hamburger:hover .line:nth-child(3){
+  transform: translateY(-6px) rotate(45deg);
+}
+
 /* Banner */
 .banner {
-  display: flex;
-  padding: 2rem 0;
+  background-color: #f6f6f6;
 }
 
 .banner-item {
   flex: 1 0 50%;
-  max-width: 50%;
 }
 
-/* Search */
-
 .banner-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 1rem;
+  text-align: center;
 }
 
 .banner-heading {
   max-width: 600px;
-  text-align: center;
   font-size: 2.5rem;
   color: #4B467C;
 }
 
-.search-wrapper {
-  max-width: 600px;
-  text-align: center;
-}
-
+/* Search */
 .search-heading {
   color: #8A66AD;
   font-size: 1.5rem;
 }
 
-.search-input {
-  padding: 10px 15px;
-  border: none;
+.gallery_img1 {
+  max-width: 75%;
 }
 
-.search-input::placeholder {
-  color: #B6B9C6;
-}
-
-.search-btn {
-  padding: 10px 15px;
-  background: #DE82C5;
-  color: #FFF;
-  font-weight: 600;
-  border-radius: 2px;
+.gallery_img2 {
+  max-width: 20%;
 }
 
 .deco-paw {
@@ -216,13 +267,6 @@ deco {
 }
 
 /* Pets section */
-#pets {
-  background: url('img/cat_bg.svg');
-  /* paralax effect */
-  background-attachment: fixed;
-  background-position: center;
-}
-
 .profile {
   flex: 1 1 400px;
   max-width: 600px;
@@ -263,8 +307,37 @@ deco {
   color: #FFF;
   font-weight: 600;
 }
+/* Form */
+.create-new-form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  color: #C5C7D6;
+  background-color: #4B467C;
+}
 
+.form-fieldset {
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 1px solid #fff;
+}
 
+.form-label {
+  display: flex;
+  align-items: center;
+}
+
+.radiobtn-wrapper {
+  display: flex;
+}
+
+.radiobtn-item {
+  margin-right: 2rem;
+}
+
+.radiobtn-input {
+  margin: 0.5rem;
+}
 
 /* Footer */
 .main-footer {
@@ -310,4 +383,36 @@ deco {
   display: block;
   padding: 1rem 0;
   text-align: center;
+}
+
+/* ************
+MEDIA QUERY 
+**************/
+
+@media (max-width: 1200px) {
+  .nav-wrapper{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    width: 100%;
+    background-color:rgba(75, 70, 124, 0.8);
+    opacity: 0;
+    transition: 0.5s all ease-in-out;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger:hover ~ .nav-wrapper {
+    top: 60px;
+    opacity: 1;
+    transition: 0.5s all ease-in-out;
+  }
+
+  .nav-link{
+    border-top: 1px solid rgba(255,255,255,0.3);
+  }
 }

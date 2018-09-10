@@ -104,6 +104,11 @@
                 </svg>
                 <h1 class="logo-heading">Знайди друга</h1>
             </div>
+            <button class="hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
             <nav class="nav-wrapper">
                 <a href="#" class="nav-link">Все про усиновлення</a>
                 <div class="nav-link--accent">
@@ -121,22 +126,24 @@
     </header>
     <main class="main-content">
         <section class="section-container banner">
-            <div class="banner-gallery banner-item">
-                <img src="img/dog_2.jpg" alt="cute animals" class="gallery_img1" width="350">
-                <img src="img/img_5.jpg" alt="cute animals" class="gallery_img2" width="150">
-                <img src="img/img_1.jpg" alt="cute animals" class="gallery_img3" width="650">
-            </div>
-            <div class="banner-content banner-item">
-                <svg class="deco deco-paw">
-                    <use xlink:href="#icon-paw"></use>
-                </svg>
-                <h2 class="banner-heading">Ресурс пошуку нової сім'ї бездомним тваринам</h2>
-                <form class="search-wrapper">
-                    <h3 class="search-heading">Знайди свого найкращого друга</h3>
-                    <input class="search-input" type="search" placeholder="Я шукаю ...">
-                    <input class="search-input" type="search" placeholder="В регіоні ...">
-                    <button class="search-btn">Знайти</button>
-                </form>
+            <div class="wrapper d-flex">
+                <div class="banner-gallery banner-item">
+                    <img src="img/dog_2.jpg" alt="cute animals" class="gallery_img1" width="350">
+                    <img src="img/img_5.jpg" alt="cute animals" class="gallery_img2" width="150">
+                    <img src="img/img_1.jpg" alt="cute animals" class="gallery_img3" width="650">
+                </div>
+                <div class="banner-content banner-item">
+                    <svg class="deco deco-paw">
+                        <use xlink:href="#icon-paw"></use>
+                    </svg>
+                    <h2 class="banner-heading">Ресурс пошуку нової сім'ї бездомним тваринам</h2>
+                    <form class="search-wrapper">
+                        <h3 class="search-heading">Знайди свого найкращого друга</h3>
+                        <input class="form-input" type="search" placeholder="Я шукаю ...">
+                        <input class="form-input" type="search" placeholder="В регіоні ...">
+                        <button class="accent-btn">Знайти</button>
+                    </form>
+                </div>
             </div>
         </section>
         <section class="section-container" id="adoption">
@@ -182,9 +189,9 @@
             <div class="wrapper">
                 <h3 class="section-heading">Пошук тварин</h3>
                 <form class="search-wrapper">
-                    <input class="search-input" type="search" placeholder="Я шукаю ...">
-                    <input class="search-input" type="search" placeholder="В регіоні ...">
-                    <button class="search-btn">Знайти</button>
+                    <input class="form-input" type="search" placeholder="Я шукаю ...">
+                    <input class="form-input" type="search" placeholder="В регіоні ...">
+                    <button class="accent-btn">Знайти</button>
                 </form>
                 <div class="row">
                     <figure class="profile">
@@ -251,10 +258,48 @@
 
             </div>
         </section>
-        <section class="section-container" id="form">
-                <div class="wrapper">
-                    <h3 class="section-heading">Створити нове оголошення</h3>
-                </div>
+        <section class="section-container" id="create-new">
+            <div class="wrapper">
+                <h3 class="section-heading">Створити нове оголошення</h3>
+                <form class="create-new-form">
+                    <fieldset class="form-fieldset">
+                        <legend class="form-fieldset-title">Тварина</legend>
+                        <input type="text" class="form-input" placeholder="Iм'я" name="name">
+                        <input type="text" class="form-input" placeholder="Порода" name="breed">
+                        <input type="number" class="form-input" placeholder="Приблизний вік" name="age">
+                        <input type="file" name="pic" accept="image/*">
+                        <div>
+                            <label class="form-label">
+                                <input type="radio" name="gender" value="female" class="radiobtn-input">Дівчинка
+                            </label>
+                            <label class="form-label">
+                                <input type="radio" name="gender" value="male" class="radiobtn-input">Хлопчик
+                            </label>
+                        </div>
+                        <div>
+                            <label class="form-label">
+                                <input type="radio" name="type" value="cat" class="radiobtn-input">Кіт
+                            </label>
+                            <label class="form-label">
+                                <input type="radio" name="type" value="dog" class="radiobtn-input">Собака
+                            </label>
+                        </div>
+                        <textarea class="form-input" name="details" rows="10" cols="30" placeholder="Напишіть кородкий опис тваринки та її історію"></textarea>
+                    </fieldset>
+                    <fieldset class="form-fieldset">
+                        <legend class="form-fieldset-title">Kонтактна особа</legend>
+                        <input type="text" class="form-input" placeholder="Iм'я" name="personName">
+                        <input type="tel" class="form-input" placeholder="+(380)xx-xx-xx-xxx" name="personName">
+                        <input list="address" placeholder="Miсто" class="form-input">
+                        <datalist id="address">
+                            <option name="lviv" value="Львів"></option>
+                            <option name="kiev" value="Київ"></option>
+                            <option name="odesa" value="Одеса"></option>
+                        </datalist>
+                    </fieldset>
+                    <button class="accent-btn">Надісдати</button>
+                </form>
+            </div>
         </section>
     </main>
     <footer class="main-footer">
@@ -305,6 +350,9 @@
             </div>
             <div class="col">
                 <h4 class="col-heading">Підтримай організацію</h4>
+                <button class="accent-btn">
+                    Пожертвувати
+                </button>
             </div>
         </div>
         <small class="copyright">© Всі права захищено ELEKS kids, 2018 </small>
