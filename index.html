@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+    <script src="script.js" defer></script>
     <title>Document</title>
 </head>
 
@@ -93,6 +94,10 @@
                 <path fill="#e58c33" style="fill: var(--color3, #e58c33)" d="M12.215 30.803l-0.412 0.046-0.395-2.601-0.145-0.95-0.319-2.097-0.2-1.32-0.464-3.052 1.908-0.844 0.003 1.27 0.005 2.144 0.013 5.415 0.002 0.653z"></path>
                 <path fill="#e58c33" style="fill: var(--color3, #e58c33)" d="M15.882 20.827l-1.522 10.022-0.412-0.046 0.026-10.82z"></path>
             </symbol>
+            <symbol id="icon-menu" viewBox="0 0 24 24">
+                <title>menu</title>
+                <path d="M19.68 10.8h-15.36c-0.662 0-0.72 0.536-0.72 1.2s0.058 1.2 0.72 1.2h15.36c0.662 0 0.72-0.536 0.72-1.2s-0.058-1.2-0.72-1.2zM19.68 15.6h-15.36c-0.662 0-0.72 0.536-0.72 1.2s0.058 1.2 0.72 1.2h15.36c0.662 0 0.72-0.536 0.72-1.2s-0.058-1.2-0.72-1.2zM4.32 8.4h15.36c0.662 0 0.72-0.536 0.72-1.2s-0.058-1.2-0.72-1.2h-15.36c-0.662 0-0.72 0.536-0.72 1.2s0.058 1.2 0.72 1.2z"></path>
+            </symbol>
         </defs>
     </svg>
     <!-- SVG END          -->
@@ -104,23 +109,19 @@
                 </svg>
                 <h1 class="logo-heading">Знайди друга</h1>
             </div>
-            <button class="hamburger">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </button>
+            <svg class="icon-menu"><use xlink:href="#icon-menu"></use></svg>
             <nav class="nav-wrapper">
-                <a href="#" class="nav-link">Все про усиновлення</a>
+                <a href="#adoption" class="nav-link">Все про усиновлення</a>
                 <div class="nav-link--accent">
                     <svg class="icon icon-puppy">
                         <use xlink:href="#icon-puppy"></use>
                     </svg>
-                    <a href="#" class="nav-link">
+                    <a href="#pets" class="nav-link">
                         Тваринки готові для усиновлення
                     </a>
                 </div>
                 <a href="#" class="nav-link">Як Допомогти?</a>
-                <a href="#" class="nav-link">Kонтакти</a>
+                <a href="#contacts" class="nav-link">Kонтакти</a>
             </nav>
         </div>
     </header>
@@ -284,7 +285,7 @@
                                 <input type="radio" name="type" value="dog" class="radiobtn-input">Собака
                             </label>
                         </div>
-                        <textarea class="form-input" name="details" rows="10" cols="30" placeholder="Напишіть кородкий опис тваринки та її історію"></textarea>
+                        <textarea class="form-input" name="details" rows="10" placeholder="Напишіть кородкий опис тваринки та її історію"></textarea>
                     </fieldset>
                     <fieldset class="form-fieldset">
                         <legend class="form-fieldset-title">Kонтактна особа</legend>
@@ -302,7 +303,7 @@
             </div>
         </section>
     </main>
-    <footer class="main-footer">
+    <footer class="main-footer" id="contacts">
         <div class="wrapper row">
             <div class="col contact">
                 <h4 class="col-heading">Контакти</h4>

@@ -151,37 +151,11 @@ deco {
   top: -30px;
 }
 
-/* Humburger  */
-.hamburger {
- display: none;
-}
-
-.hamburger .line{
-  width: 24px;
-  height: 2px;
-  background-color: white;
-  display: block;
-  margin: 4px auto;
-  transition: all 0.3s ease-in-out;
-}
-
-/* THREE */
-
-.hamburger:hover .line:nth-child(1),
-.hamburger:hover .line:nth-child(3){
-  width: 18px;
-}
-
-.hamburger:hover .line:nth-child(1){
-  transform: translateY(6px) rotate(-45deg);
-}
-
-.hamburger:hover .line:nth-child(2){
-  opacity: 0;
-}
-
-.hamburger:hover .line:nth-child(3){
-  transform: translateY(-6px) rotate(45deg);
+.icon-menu {
+  display: none;
+  width: 30px;
+  height: 30px;
+  fill: #fff;
 }
 
 /* Banner */
@@ -316,6 +290,10 @@ deco {
   background-color: #4B467C;
 }
 
+.create-new-form textarea {
+  width: 100%;
+}
+
 .form-fieldset {
   padding: 1rem;
   margin: 1rem 0;
@@ -390,23 +368,27 @@ MEDIA QUERY
 **************/
 
 @media (max-width: 1200px) {
-  .nav-wrapper{
+  .wrapper {
+    width: 90%;
+  }
+  
+  .icon-menu {
+    display: block;
+  }
+  
+  .nav-wrapper {
     display: flex;
     flex-direction: column;
+    width: 100%;
     position: absolute;
     left: 0;
     top: -100%;
-    width: 100%;
     background-color:rgba(75, 70, 124, 0.8);
-    opacity: 0;
     transition: 0.5s all ease-in-out;
+    opacity: 0;
   }
 
-  .hamburger {
-    display: block;
-  }
-
-  .hamburger:hover ~ .nav-wrapper {
+  .nav-wrapper.open{
     top: 60px;
     opacity: 1;
     transition: 0.5s all ease-in-out;
@@ -414,5 +396,9 @@ MEDIA QUERY
 
   .nav-link{
     border-top: 1px solid rgba(255,255,255,0.3);
+  }
+
+  .create-new-form {
+    padding: 10px;
   }
 }
