@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./img/logo.png">
     <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+    <script src="script.js" defer></script>
     <title>Document</title>
 </head>
 
@@ -94,6 +95,10 @@
                 <path fill="#e58c33" style="fill: var(--color3, #e58c33)" d="M12.215 30.803l-0.412 0.046-0.395-2.601-0.145-0.95-0.319-2.097-0.2-1.32-0.464-3.052 1.908-0.844 0.003 1.27 0.005 2.144 0.013 5.415 0.002 0.653z"></path>
                 <path fill="#e58c33" style="fill: var(--color3, #e58c33)" d="M15.882 20.827l-1.522 10.022-0.412-0.046 0.026-10.82z"></path>
             </symbol>
+            <symbol id="icon-menu" viewBox="0 0 24 24">
+                <title>menu</title>
+                <path d="M19.68 10.8h-15.36c-0.662 0-0.72 0.536-0.72 1.2s0.058 1.2 0.72 1.2h15.36c0.662 0 0.72-0.536 0.72-1.2s-0.058-1.2-0.72-1.2zM19.68 15.6h-15.36c-0.662 0-0.72 0.536-0.72 1.2s0.058 1.2 0.72 1.2h15.36c0.662 0 0.72-0.536 0.72-1.2s-0.058-1.2-0.72-1.2zM4.32 8.4h15.36c0.662 0 0.72-0.536 0.72-1.2s-0.058-1.2-0.72-1.2h-15.36c-0.662 0-0.72 0.536-0.72 1.2s0.058 1.2 0.72 1.2z"></path>
+            </symbol>
         </defs>
     </svg>
     <!-- SVG END          -->
@@ -105,23 +110,19 @@
                 </svg>
                 <h1 class="logo-heading">Знайди друга</h1>
             </div>
-            <button class="hamburger">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </button>
+            <svg class="icon-menu"><use xlink:href="#icon-menu"></use></svg>
             <nav class="nav-wrapper">
-                <a href="#" class="nav-link">Все про усиновлення</a>
+                <a href="#adoption" class="nav-link">Все про усиновлення</a>
                 <div class="nav-link--accent">
                     <svg class="icon icon-puppy">
                         <use xlink:href="#icon-puppy"></use>
                     </svg>
-                    <a href="#" class="nav-link">
+                    <a href="#pets" class="nav-link">
                         Тваринки готові для усиновлення
                     </a>
                 </div>
                 <a href="#" class="nav-link">Як Допомогти?</a>
-                <a href="#" class="nav-link">Kонтакти</a>
+                <a href="#contacts" class="nav-link">Kонтакти</a>
             </nav>
         </div>
     </header>
@@ -129,12 +130,12 @@
         <section class="section-container banner">
             <div class="wrapper d-flex">
                 <div class="banner-gallery banner-item">
-                    <img src="img/dog_2.jpg" alt="cute animals" class="gallery_img1" width="350">
-                    <img src="img/img_5.jpg" alt="cute animals" class="gallery_img2" width="150">
-                    <img src="img/img_1.jpg" alt="cute animals" class="gallery_img3" width="650">
+                    <img src="img/dog_2.jpg" alt="cute animals" class="gallery_img1 zoomIn" width="350">
+                    <img src="img/img_5.jpg" alt="cute animals" class="gallery_img2 zoomIn" width="150">
+                    <img src="img/img_1.jpg" alt="cute animals" class="gallery_img3 zoomIn" width="650">
                 </div>
                 <div class="banner-content banner-item">
-                    <svg class="deco deco-paw">
+                    <svg class="banner-deco zoomIn">
                         <use xlink:href="#icon-paw"></use>
                     </svg>
                     <h2 class="banner-heading">Ресурс пошуку нової сім'ї бездомним тваринам</h2>
@@ -210,11 +211,10 @@
                     <figure class="profile">
                         <img class="profile-img" src="img/img_3.jpg" alt="собака Мікі">
                         <figcaption class="profile-caption">
-                            <h5 class="profile-heading">Том</h5>
+                            <h5 class="profile-heading">Барсік</h5>
                             <p class="profile-txt">
-                                Знайомтесь Том, 3-річний чудовий котик. Він грайливий, життєрадісний і дружелюбний до оточуючих. Він обожнює бути в центрі
-                                уваги і любить бути домашнім улюбленцем. Він також любить гратись та прогулянки на свіжому
-                                повітрі...
+                                Барсіку 8 місяців. Він веселий та невгамовний малюк. Він дійсно гіперактивний, але зчасом він виросте з цього.
+                                Він любить увагу і їжу, він не агресивний взагалі і гарно ладнає з іншими тваринами.
                             </p>
                             <button class="profile-btn"> Детальніше</button>
                         </figcaption>
@@ -222,11 +222,10 @@
                     <figure class="profile">
                         <img class="profile-img" src="img/img_6.jpg" alt="собака Ельза">
                         <figcaption class="profile-caption">
-                            <h5 class="profile-heading">Том</h5>
+                            <h5 class="profile-heading">Ельза</h5>
                             <p class="profile-txt">
-                                Знайомтесь Том, 3-річний чудовий котик. Він грайливий, життєрадісний і дружелюбний до оточуючих. Він обожнює бути в центрі
-                                уваги і любить бути домашнім улюбленцем. Він також любить гратись та прогулянки на свіжому
-                                повітрі...
+                                Любить іграшки та людей! Вона є надзвичайною собакою, яка хоче порадувати, і ми не розуміємо, чому ще її не усиновили.
+                                Їй потрібно і хочеться бути частиною сім'ї! Якщо ви зацікавлені в Ельзі, будь ласка, зателефонуйте або відвідайте притулок
                             </p>
                             <button class="profile-btn">Детальніше</button>
                         </figcaption>
@@ -234,25 +233,24 @@
                     <figure class="profile">
                         <img class="profile-img" src="img/img_7.jpg" alt="собака Ельза">
                         <figcaption class="profile-caption">
-                            <h5 class="profile-heading">Том</h5>
+                            <h5 class="profile-heading">Рікі</h5>
                             <p class="profile-txt">
-                                Знайомтесь Том, 3-річний чудовий котик. Він грайливий, життєрадісний і дружелюбний до оточуючих. Він обожнює бути в центрі
-                                уваги і любить бути домашнім улюбленцем. Він також любить гратись та прогулянки на свіжому
-                                повітрі...
+                                Рікі блукав і, можливо, був використаний як сторожовий собака. 
+                                Він хоче бути близьким до вас та любить демонструвати свої трюки, вниз, лежати, сидіти лапою і говорити.
+                                Рікі прекласно підійде для тих, хто любить прогулянки на свіжому повітрі...
                             </p>
                             <button class="profile-btn">Детальніше</button>
                         </figcaption>
                     </figure>
                     <figure class="profile">
-                        <img class="profile-img" src="img/img_3.jpg" alt="собака Ельза">
+                        <img class="profile-img" src="img/img_3.jpg" alt="собака Мікі">
                         <figcaption class="profile-caption">
-                            <h5 class="profile-heading">Том</h5>
+                            <h5 class="profile-heading">Барсік</h5>
                             <p class="profile-txt">
-                                Знайомтесь Том, 3-річний чудовий котик. Він грайливий, життєрадісний і дружелюбний до оточуючих. Він обожнює бути в центрі
-                                уваги і любить бути домашнім улюбленцем. Він також любить гратись та прогулянки на свіжому
-                                повітрі...
+                                Барсіку 8 місяців. Він веселий та невгамовний малюк. Він дійсно гіперактивний, але зчасом він виросте з цього.
+                                Він любить увагу і їжу, він не агресивний взагалі і гарно ладнає з іншими тваринами.
                             </p>
-                            <button class="profile-btn"> Детальніше</button>
+                            <button class="profile-btn">Детальніше</button>
                         </figcaption>
                     </figure>
                 </div>
@@ -285,7 +283,7 @@
                                 <input type="radio" name="type" value="dog" class="radiobtn-input">Собака
                             </label>
                         </div>
-                        <textarea class="form-input" name="details" rows="10" cols="30" placeholder="Напишіть кородкий опис тваринки та її історію"></textarea>
+                        <textarea class="form-input" name="details" rows="10" placeholder="Напишіть кородкий опис тваринки та її історію"></textarea>
                     </fieldset>
                     <fieldset class="form-fieldset">
                         <legend class="form-fieldset-title">Kонтактна особа</legend>
@@ -303,7 +301,7 @@
             </div>
         </section>
     </main>
-    <footer class="main-footer">
+    <footer class="main-footer" id="contacts">
         <div class="wrapper row">
             <div class="col contact">
                 <h4 class="col-heading">Контакти</h4>
