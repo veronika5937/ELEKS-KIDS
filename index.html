@@ -110,7 +110,9 @@
                 </svg>
                 <h1 class="logo-heading">Знайди друга</h1>
             </div>
-            <svg class="icon-menu"><use xlink:href="#icon-menu"></use></svg>
+            <svg class="icon-menu">
+                <use xlink:href="#icon-menu"></use>
+            </svg>
             <nav class="nav-wrapper">
                 <a href="#adoption" class="nav-link">Все про усиновлення</a>
                 <div class="nav-link--accent">
@@ -213,8 +215,8 @@
                         <figcaption class="profile-caption">
                             <h5 class="profile-heading">Барсік</h5>
                             <p class="profile-txt">
-                                Барсіку 8 місяців. Він веселий та невгамовний малюк. Він дійсно гіперактивний, але зчасом він виросте з цього.
-                                Він любить увагу і їжу, він не агресивний взагалі і гарно ладнає з іншими тваринами.
+                                Барсіку 8 місяців. Він веселий та невгамовний малюк. Він дійсно гіперактивний, але зчасом він виросте з цього. Він любить
+                                увагу і їжу, він не агресивний взагалі і гарно ладнає з іншими тваринами.
                             </p>
                             <button class="profile-btn"> Детальніше</button>
                         </figcaption>
@@ -224,8 +226,9 @@
                         <figcaption class="profile-caption">
                             <h5 class="profile-heading">Ельза</h5>
                             <p class="profile-txt">
-                                Любить іграшки та людей! Вона є надзвичайною собакою, яка хоче порадувати, і ми не розуміємо, чому ще її не усиновили.
-                                Їй потрібно і хочеться бути частиною сім'ї! Якщо ви зацікавлені в Ельзі, будь ласка, зателефонуйте або відвідайте притулок
+                                Любить іграшки та людей! Вона є надзвичайною собакою, яка хоче порадувати, і ми не розуміємо, чому ще її не усиновили. Їй
+                                потрібно і хочеться бути частиною сім'ї! Якщо ви зацікавлені в Ельзі, будь ласка, зателефонуйте
+                                або відвідайте притулок
                             </p>
                             <button class="profile-btn">Детальніше</button>
                         </figcaption>
@@ -235,9 +238,9 @@
                         <figcaption class="profile-caption">
                             <h5 class="profile-heading">Рікі</h5>
                             <p class="profile-txt">
-                                Рікі блукав і, можливо, був використаний як сторожовий собака. 
-                                Він хоче бути близьким до вас та любить демонструвати свої трюки, вниз, лежати, сидіти лапою і говорити.
-                                Рікі прекласно підійде для тих, хто любить прогулянки на свіжому повітрі...
+                                Рікі блукав і, можливо, був використаний як сторожовий собака. Він хоче бути близьким до вас та любить демонструвати свої
+                                трюки, вниз, лежати, сидіти лапою і говорити. Рікі прекласно підійде для тих, хто любить
+                                прогулянки на свіжому повітрі...
                             </p>
                             <button class="profile-btn">Детальніше</button>
                         </figcaption>
@@ -247,8 +250,8 @@
                         <figcaption class="profile-caption">
                             <h5 class="profile-heading">Барсік</h5>
                             <p class="profile-txt">
-                                Барсіку 8 місяців. Він веселий та невгамовний малюк. Він дійсно гіперактивний, але зчасом він виросте з цього.
-                                Він любить увагу і їжу, він не агресивний взагалі і гарно ладнає з іншими тваринами.
+                                Барсіку 8 місяців. Він веселий та невгамовний малюк. Він дійсно гіперактивний, але зчасом він виросте з цього. Він любить
+                                увагу і їжу, він не агресивний взагалі і гарно ладнає з іншими тваринами.
                             </p>
                             <button class="profile-btn">Детальніше</button>
                         </figcaption>
@@ -257,46 +260,48 @@
 
             </div>
         </section>
-        <section class="section-container" id="create-new">
+        <!-- New profile -->
+        <section id="new-profile">
             <div class="wrapper">
-                <h3 class="section-heading">Створити нове оголошення</h3>
-                <form class="create-new-form">
-                    <fieldset class="form-fieldset">
-                        <legend class="form-fieldset-title">Тварина</legend>
-                        <input type="text" class="form-input" placeholder="Iм'я" name="name">
-                        <input type="text" class="form-input" placeholder="Порода" name="breed">
-                        <input type="number" class="form-input" placeholder="Приблизний вік" name="age">
-                        <input type="file" name="pic" accept="image/*">
-                        <div>
-                            <label class="form-label">
-                                <input type="radio" name="gender" value="female" class="radiobtn-input">Дівчинка
-                            </label>
-                            <label class="form-label">
-                                <input type="radio" name="gender" value="male" class="radiobtn-input">Хлопчик
-                            </label>
+                <h3 class="section-heading">Нове оголошення</h3>
+                <form class="new-profile-form">
+                    <fieldset>
+                        <legend>Тваринка</legend>
+                        <input type="text" placeholder="Ім'я" class="new-profile-input" name="petName">
+                        <input type="text" placeholder="Порода" class="new-profile-input" name="breed">
+                        <input type="number" placeholder="Вік" class="new-profile-input" name="age">
+                        <input type="file" accept="image/*" name="img" class="new-profile-input">
+                        <div class="input-wrapper">
+                            <div class="radio-wrapper">
+                                <label class="new-profile-radio">Дівчика
+                                    <input type="radio" name="gender" value="female">
+                                </label>
+                                <label class="new-profile-radio">Хлопчик
+                                    <input type="radio" name="gender" value="male">
+                                </label>
+                            </div>
+                            <div class="radio-wrapper">
+                                <label class="new-profile-radio">Котик
+                                    <input type="radio" name="type" value="сat">
+                                </label>
+                                <label class="new-profile-radio">Песик
+                                    <input type="radio" name="type" value="dog">
+                                </label>
+                            </div>
                         </div>
-                        <div>
-                            <label class="form-label">
-                                <input type="radio" name="type" value="cat" class="radiobtn-input">Кіт
-                            </label>
-                            <label class="form-label">
-                                <input type="radio" name="type" value="dog" class="radiobtn-input">Собака
-                            </label>
-                        </div>
-                        <textarea class="form-input" name="details" rows="10" placeholder="Напишіть кородкий опис тваринки та її історію"></textarea>
+                        <textarea name="description" placeholder="Напишіть кородкий опис тваринки та її історію" rows="10" class="new-profile-input new-profile-textarea"></textarea>
                     </fieldset>
-                    <fieldset class="form-fieldset">
-                        <legend class="form-fieldset-title">Kонтактна особа</legend>
-                        <input type="text" class="form-input" placeholder="Iм'я" name="personName">
-                        <input type="tel" class="form-input" placeholder="+(380)xx-xx-xx-xxx" name="personName">
-                        <input list="address" placeholder="Miсто" class="form-input">
-                        <datalist id="address">
-                            <option name="lviv" value="Львів"></option>
-                            <option name="kiev" value="Київ"></option>
-                            <option name="odesa" value="Одеса"></option>
+                    <fieldset>
+                        <legend>Контактна особа</legend>
+                        <input type="text" placeholder="Ім'я" class="new-profile-input" name="userName">
+                        <input type="tel" class="new-profile-input" name="phone" placeholder="+(380)xx-xx-xx-xxx">
+                        <input type="text" list="city" class="new-profile-input" placeholder="Місто" name="city">
+                        <datalist id="city">
+                            <option value="Львів"></option>
+                            <option value="Одеса"></option>
                         </datalist>
                     </fieldset>
-                    <button class="accent-btn">Надісдати</button>
+                    <button class="accent-btn">Надіслати</button>
                 </form>
             </div>
         </section>

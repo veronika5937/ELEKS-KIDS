@@ -8,6 +8,10 @@
 	padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Arial', sans-serif;
 }
@@ -31,10 +35,17 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
 }
 
+legend {
+  font-family: 'Caveat', cursive;
+}
+
 img {
   max-width: 100%;
 }
 
+fieldset {
+  border: none;
+}
 
 /* ================================= 
   Base Layout Styles
@@ -94,6 +105,7 @@ img {
   /* paralax effect */
   background-attachment: fixed;
   background-position: center;
+  padding-bottom: 2rem;
 }
 
 /* Logo */
@@ -278,41 +290,47 @@ img {
   color: #FFF;
   font-weight: 600;
 }
-/* Form */
-.create-new-form {
+
+/* New profile */
+.new-profile-form {
+  background: #4B467C;
+  padding: 40px;
   max-width: 800px;
   margin: 0 auto;
-  padding: 1rem 2rem;
-  color: #C5C7D6;
-  background-color: #4B467C;
+  color: rgba(255, 255, 255, 0.8);
 }
 
-.create-new-form textarea {
+.new-profile-input {
+  background-color: rgba(255, 255, 255, 0.4);
+  border: none;
+  padding: 8px 15px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.new-profile-input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.input-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.radio-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-profile-radio {
+  margin-bottom: 8px;
+}
+
+
+.new-profile-textarea {
   width: 100%;
 }
 
-.form-fieldset {
-  padding: 1rem;
-  margin: 1rem 0;
-  border: 1px solid #fff;
-}
-
-.form-label {
-  display: flex;
-  align-items: center;
-}
-
-.radiobtn-wrapper {
-  display: flex;
-}
-
-.radiobtn-item {
-  margin-right: 2rem;
-}
-
-.radiobtn-input {
-  margin: 0.5rem;
-}
 
 /* Footer */
 .main-footer {
@@ -397,6 +415,16 @@ MEDIA QUERY
 
   .create-new-form {
     padding: 10px;
+  }
+}
+
+@media (max-width : 600px) {
+  .new-profile-input {
+      width: 100%;
+  }
+
+  .new-profile-form {
+      padding: 20px;
   }
 }
 
